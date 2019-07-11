@@ -1,0 +1,64 @@
+@value tablet-landscape, tablet-portrait, phone-huge, phone-large, phone-medium, phone-small from '../../../../sass/values/breakpoints.scss';
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media phone-medium {
+    justify-content: center;
+  }
+}
+
+.container,
+.extra-container {
+  margin-bottom: 4rem;
+}
+
+.extra-container {
+  @media tablet-portrait {
+    display: none;
+  }
+}
+
+.image {
+  height: 34rem;
+  width: 26.5rem;
+  margin-bottom: 1.5rem;
+
+  @media tablet-landscape {
+    height: 29rem;
+    width: 22.6rem;
+  }
+  @media phone-huge {
+    height: 25rem;
+    width: 19.5rem;
+  }
+  @media phone-large {
+    height: 22rem;
+    width: 17.1rem;
+  }
+  @media phone-medium {
+    height: 28rem;
+    width: 21.8rem;
+  }
+  @media phone-small {
+    height: 26rem;
+    width: 20.3rem;
+  }
+}
+
+.brand {
+  height: 1rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  height: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  height: 1rem;
+  margin-bottom: 1rem;
+}

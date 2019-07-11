@@ -1,0 +1,138 @@
+@value bg-light from '../../../sass/values/colors.scss';
+@value tablet-landscape, tablet-portrait, phone-huge, phone-large, phone-small from '../../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width from '../../../sass/values/composition.scss';
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 5rem;
+
+  @media phone-huge {
+    flex-direction: column;
+  }
+}
+
+.column {
+  @media phone-huge {
+    display: flex;
+    justify-content: center;
+  }
+}
+.column:nth-child(1) {
+  @media phone-huge {
+    order: 1;
+  }
+}
+.column:nth-child(2) {
+  @media phone-huge {
+    order: 0;
+  }
+}
+
+.heading {
+  margin-top: 3.5rem;
+  font-size: 5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  @media tablet-landscape {
+    font-size: 4.5rem;
+  }
+  @media tablet-portrait {
+    font-size: 3.8rem;
+  }
+  @media phone-huge {
+    margin-top: 0;
+    font-size: 3.3rem;
+  }
+  @media phone-large {
+    margin-top: 0;
+    font-size: 3rem;
+  }
+  @media phone-small {
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+  }
+}
+
+.image {
+  height: 55rem;
+  composes: box-shadow-light from '../../../sass/values/composition.scss';
+
+  @media tablet-landscape {
+    height: 50rem;
+  }
+  @media tablet-portrait {
+    height: 38rem;
+  }
+  @media phone-huge {
+    margin-bottom: 3rem;
+  }
+  @media phone-small {
+    height: 32rem;
+  }
+}
+
+// gray section
+.gray-section {
+  margin-top: -41rem;
+  background-color: bg-light;
+
+  @media tablet-landscape {
+    margin-top: -38rem;
+  }
+  @media tablet-portrait {
+    margin-top: -27.5rem;
+  }
+  @media phone-huge {
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.gray-content {
+  composes: content-width from '../../../sass/values/composition.scss';
+
+  display: flex;
+  align-items: center;
+  padding: 7rem 5rem;
+
+  @media tablet-landscape {
+    padding: 5rem 5rem;
+  }
+  @media tablet-portrait {
+    padding: 3rem 5rem;
+  }
+  @media phone-huge {
+    padding: 2rem 3rem;
+  }
+}
+
+.gray-text {
+  margin-bottom: 3rem;
+
+  @media phone-huge {
+    margin-bottom: 2rem;
+  }
+}
+
+.gray-column:nth-child(1) {
+  flex-basis: 55%;
+  line-height: 2;
+
+  @media phone-huge {
+    flex: 1;
+  }
+}
+
+.gray-column:nth-child(2) {
+  flex-basis: 45%;
+
+  @media phone-huge {
+    display: none;
+  }
+}

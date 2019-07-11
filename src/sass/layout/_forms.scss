@@ -1,0 +1,116 @@
+$font-primary: 'Poppins', sans-serif;
+$font-tertiary: 'Open Sans', sans-serif;
+
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+
+$danger: #e64759;
+$color-dark: #000;
+$text-dark-2: #a7a7a7;
+$text-light-3: #6a6a6a;
+
+.form {
+  &__container {
+    display: flex;
+
+    @media (max-width: 30em) {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+
+    .column-1 {
+      flex: 1;
+      margin-right: 2.5rem;
+
+      @media (max-width: 64em) {
+        margin-right: 1.5rem;
+      }
+      @media (max-width: 30em) {
+        margin-right: 0;
+      }
+    }
+    .column-2 {
+      flex: 1;
+      margin-left: 2.5rem;
+
+      @media (max-width: 30em) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: $semi-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @media (max-width: 30em) {
+      font-size: 1rem;
+    }
+  }
+
+  &__input-container:not(:last-child) {
+    margin-bottom: 3rem;
+
+    @media (max-width: 30em) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    font-family: $font-primary;
+    font-weight: $light;
+    color: $color-dark;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3px solid $text-light-3;
+    resize: none;
+
+    @media (max-width: 30em) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__input--light {
+    color: $text-dark-2;
+  }
+
+  &__input::placeholder {
+    font-size: 1.1rem;
+    font-family: $font-tertiary;
+    font-weight: $regular;
+    color: $text-light-3;
+  }
+
+  &__error-message {
+    position: absolute;
+    font-size: 1rem;
+    color: $danger;
+  }
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
+
+    @media (max-width: 30em) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &__btn-container.auth-form {
+    justify-content: center;
+  }
+
+  &__btn-container.checkout-form {
+    justify-content: flex-end;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,113 @@
+@value font-primary, font-tertiary, light, semi-bold from '../../../sass/values/fonts.scss';
+@value color-light, text-dark-1 from '../../../sass/values/colors.scss';
+
+.container {
+  width: 55rem;
+  border-radius: 5px;
+  background-color: color-light;
+  composes: box-shadow-light from '../../../sass/values/composition.scss';
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem;
+}
+
+.column {
+  &:nth-child(1) {
+    flex: 0.4;
+  }
+  &:nth-child(2) {
+    flex: 1;
+  }
+}
+
+.image {
+  height: 15rem;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  margin-top: -0.6rem;
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;
+  font-family: font-primary;
+  font-weight: light;
+  text-transform: uppercase;
+}
+
+.brand {
+  margin-left: 0.7rem;
+  font-size: 1.2rem;
+  font-family: font-primary;
+  font-weight: semi-bold;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  & button {
+    margin-top: 0.5rem;
+    margin-left: auto;
+    font-size: 1.1rem;
+    padding: 0.4rem 2rem;
+  }
+}
+
+.control-title {
+  composes: sub-heading from '../../../sass/values/composition.scss';
+}
+
+.price {
+  flex: 1;
+  margin-top: 0.4rem;
+
+  & p {
+    font-size: 1.2rem;
+  }
+}
+
+.sizes {
+  flex: 1;
+  & select {
+    margin-left: -0.4rem;
+    display: block;
+    font-size: 1.2;
+    font-family: font-tertiary;
+    color: text-dark-1;
+    text-transform: capitalize;
+    border: none;
+  }
+}
+
+.quantity {
+  flex: 0.5;
+  & input {
+    width: 5.1rem;
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+    font-family: font-tertiary;
+    color: text-dark-1;
+    border: none;
+  }
+}
+
+.total {
+  margin-top: 0.4rem;
+  font-family: font-primary;
+}

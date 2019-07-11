@@ -1,0 +1,20 @@
+[
+  {
+    "id": "01",
+    "title": { "text1": "free", "text2": "shipping" },
+    "sub": "lorem ipsum dolor",
+    "text": "Lorem ipsum dolor sit amet, vitae suscipit feugiat non lacinia et cras, quam morbi rutrum nullam."
+  },
+  {
+    "id": "02",
+    "title": { "text1": "support", "text2": "customer" },
+    "sub": "lorem ipsum dolor",
+    "text": "Lorem ipsum dolor sit amet, vitae suscipit feugiat non lacinia et cras, quam morbi rutrum nullam."
+  },
+  {
+    "id": "03",
+    "title": { "text1": "payment", "text2": "security" },
+    "sub": "lorem ipsum dolor",
+    "text": "Lorem ipsum dolor sit amet, vitae suscipit feugiat non lacinia et cras, quam morbi rutrum nullam."
+  }
+]

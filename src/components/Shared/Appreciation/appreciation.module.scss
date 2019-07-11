@@ -1,0 +1,58 @@
+@value extra-light from '../../../sass/values/fonts.scss';
+@value color-light from '../../../sass/values/colors.scss';
+@value tablet-landscape, phone-huge, phone-medium from '../../../sass/values/breakpoints.scss';
+
+.content {
+  line-height: 1.4;
+  padding: 5rem 5rem;
+  min-width: 30vw;
+  composes: modal-background-dark from '../../../sass/values/composition.scss';
+
+  @media tablet-landscape {
+    padding: 4rem 4rem;
+  }
+  @media phone-huge {
+    width: 32rem;
+    padding: 3rem 3rem;
+  }
+  @media phone-medium {
+    width: 28rem;
+    padding: 2.5rem 2.5rem;
+  }
+}
+
+.heading {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: extra-light;
+  color: color-light;
+
+  @media tablet-landscape {
+    font-size: 3rem;
+  }
+  @media phone-huge {
+    font-size: 2.5rem;
+  }
+  @media phone-medium {
+    font-size: 2.2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+
+  @media phone-huge {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.social {
+  margin-top: -1.3rem;
+  margin-left: 3rem;
+
+  @media phone-huge {
+    margin: 0 auto;
+  }
+}

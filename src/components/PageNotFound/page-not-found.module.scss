@@ -1,0 +1,134 @@
+@value font-primary, light, semi-bold from '../../sass/values/fonts.scss';
+@value color-dark, color-light, heading, text-light-3 from '../../sass/values/colors.scss';
+@value tablet-landscape, tablet-portrait, phone-huge, phone-medium, phone-small from '../../sass/values/breakpoints.scss';
+
+%page-not-found-text {
+  font-family: font-primary;
+  color: color-dark;
+  line-height: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 3rem 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: color-light;
+  overflow: hidden;
+
+  @media phone-small {
+    padding: 3rem 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media tablet-landscape {
+    display: none;
+  }
+}
+
+.social-icons {
+  height: 16px;
+  width: 16px;
+  fill: text-light-3;
+  transition: all 0.3s;
+
+  &:hover {
+    fill: color-dark;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error {
+  @extend %page-not-found-text;
+  font-size: 25rem;
+  font-weight: light;
+
+  @media tablet-landscape {
+    font-size: 20rem;
+  }
+  @media phone-huge {
+    font-size: 16rem;
+  }
+  @media phone-medium {
+    font-size: 14rem;
+  }
+  @media phone-small {
+    font-size: 12rem;
+  }
+}
+
+.error-text {
+  @extend %page-not-found-text;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: semi-bold;
+
+  @media tablet-landscape {
+    font-size: 1.8rem;
+  }
+  @media phone-huge {
+    font-size: 1.6rem;
+  }
+  @media phone-medium {
+    font-size: 1.4rem;
+  }
+}
+
+.btn-container {
+  margin-top: 5rem;
+
+  @media tablet-landscape {
+    margin-top: 4rem;
+  }
+  @media phone-medium {
+    margin-top: 3rem;
+  }
+
+  & button {
+    width: 20rem;
+
+    @media phone-huge {
+      width: 15rem;
+    }
+    @media phone-medium {
+      width: 13rem;
+    }
+    @media phone-small {
+      width: 13rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.btn-spacing {
+  margin-left: 2rem;
+  @media phone-small {
+    margin-left: 1rem;
+  }
+}
+
+.disclaimer {
+  font-size: 1.1rem;
+  color: heading;
+
+  @media phone-huge {
+    text-align: center;
+  }
+}

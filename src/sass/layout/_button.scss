@@ -1,0 +1,104 @@
+$font-primary: 'Poppins', sans-serif;
+$font-tertiary: 'Open Sans', sans-serif;
+
+$light: 300;
+
+$color-light: #fff;
+$color-dark: #000;
+$text-dark-1: #333333;
+$text-dark-2: #a7a7a7;
+$text-light-3: #6a6a6a;
+
+%button-style {
+  cursor: pointer;
+  padding: 1rem 3.5rem;
+  font-size: 1.2rem;
+  font-family: $font-tertiary;
+  text-transform: uppercase;
+  color: $color-light;
+  background-color: $color-dark;
+  border-radius: 100px;
+  border: none;
+  transition: all 0.3s;
+
+  @media (max-width: 64em) {
+    padding: 0.8rem 3rem;
+  }
+  @media (max-width: 30em) {
+    font-size: 1.1rem;
+    padding: 0.8rem 2.4rem;
+  }
+  @media (max-width: 26.5625em) {
+    padding: 0.7rem 2.3rem;
+  }
+}
+
+.btn--dark {
+  @extend %button-style;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-dark, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 1rem 1rem rgba($color-dark, 0.2);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #555555;
+  }
+
+  &:disabled:hover {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+
+  &.waiting {
+    cursor: wait;
+  }
+}
+
+.btn--light {
+  @extend %button-style;
+  padding: 0.8rem 3.5rem;
+  color: $color-light;
+  background-color: transparent;
+  border: 1px solid $color-light;
+
+  @media (max-width: 64em) {
+    padding: 0.7rem 3rem;
+  }
+
+  &:disabled {
+    color: $text-light-3;
+    border: 1px solid $text-light-3;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-light;
+    border: 1px solid $color-light;
+  }
+}
+
+.btn--link {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: $font-primary;
+  font-weight: $light;
+  letter-spacing: 1px;
+  color: $text-dark-2;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $text-dark-1;
+  }
+}

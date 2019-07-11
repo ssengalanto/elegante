@@ -1,0 +1,14 @@
+[
+  {
+    "id": "dropdown-checkout",
+    "text": "checkout"
+  },
+  {
+    "id": "dropdown-orders",
+    "text": "your orders"
+  },
+  {
+    "id": "dropdown-logout",
+    "text": "sign out"
+  }
+]

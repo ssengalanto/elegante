@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  *:focus {
+    outline: 1px dashed gray;
+    outline-offset: 1px;
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.no-focus-ring a:focus,
+.no-focus-ring button:focus,
+.no-focus-ring section:focus {
+  outline: none;
+}

@@ -1,0 +1,29 @@
+$font-primary: 'Poppins', sans-serif;
+$font-tertiary: 'Open Sans', sans-serif;
+$regular: 400;
+$text-dark-1: #333333;
+$heading: #111111;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-weight: $regular;
+  font-family: $font-tertiary;
+  color: $text-dark-1;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: $regular;
+  color: $heading;
+}

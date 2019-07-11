@@ -1,0 +1,78 @@
+@value font-primary, font-tertiary, light, semi-bold from '../../../sass/values/fonts.scss';
+@value color-dark, text-dark-2, text-light-3 from '../../../sass/values/colors.scss';
+@value tablet-portrait, phone-huge from '../../../sass/values/breakpoints.scss';
+
+%filter-input {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-family: font-primary;
+  font-weight: light;
+  border: 1px solid text-dark-2;
+}
+
+.container {
+  flex-basis: 25%;
+  padding: 2rem 3rem 1rem 2rem;
+
+  @media tablet-portrait {
+    flex-basis: 32%;
+    margin-right: 1rem;
+  }
+
+  @media phone-huge {
+    padding: 2rem 2rem 1rem 2.5rem;
+  }
+}
+
+.input {
+  @extend %filter-input;
+
+  &::placeholder {
+    font-size: 1.2rem;
+    font-family: font-primary;
+    font-weight: regular;
+    color: text-light-3;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: semi-bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.input-range {
+  width: 100%;
+  height: 2px;
+  margin-top: 1.5rem;
+  background: #d3d3d3;
+  opacity: 0.7;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &::-webkit-slider-thumb {
+    cursor: pointer;
+    width: 3px;
+    height: 13px;
+    background: color-dark;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+.sort {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  font-size: 1.2rem;
+  font-family: font-tertiary;
+  text-transform: capitalize;
+
+  @media tablet-portrait {
+    margin-top: 0.6rem;
+  }
+}

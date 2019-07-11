@@ -1,0 +1,234 @@
+@value font-primary, font-tertiary, light, semi-bold from '../../../sass/values/fonts.scss';
+@value text-dark-1 from '../../../sass/values/colors.scss';
+@value tablet-portrait, phone-huge, phone-medium, phone-small from '../../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../../sass/values/composition.scss';
+}
+
+.title {
+  composes: heading-1 from '../../../sass/values/composition.scss';
+}
+
+.container {
+  display: flex;
+
+  @media phone-huge {
+    flex-direction: column;
+  }
+}
+
+.back-btn {
+  cursor: pointer;
+  align-self: flex-start;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: font-primary;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+
+  @media phone-huge {
+    display: none;
+  }
+}
+
+.column {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 2.5rem;
+
+  @media tablet-portrait {
+    justify-content: center;
+  }
+  @media tablet-portrait {
+    padding: 0 1.5rem;
+  }
+  @media phone-huge {
+    padding: 0;
+  }
+
+  &:nth-child(1) {
+    align-items: center;
+  }
+  &:nth-child(2) {
+    margin-top: 2.6rem;
+
+    @media phone-huge {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.image {
+  width: 30.2rem;
+
+  @media tablet-portrait {
+    width: 25rem;
+  }
+  @media phone-small {
+    width: 20rem;
+  }
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  font-family: font-primary;
+  font-weight: light;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  @media tablet-portrait {
+    font-size: 2rem;
+  }
+  @media phone-huge {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  @media phone-medium {
+    font-size: 1.8rem;
+  }
+  @media phone-small {
+    font-size: 1.6rem;
+  }
+}
+
+.brand {
+  margin-left: 0.7rem;
+  font-size: 1.2rem;
+  font-family: font-primary;
+  font-weight: semi-bold;
+  text-transform: uppercase;
+}
+
+.description {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: font-primary;
+  text-transform: capitalize;
+}
+
+.measurement {
+  display: flex;
+
+  & p {
+    flex: 1;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 2rem;
+
+  @media phone-huge {
+    padding: 0;
+  }
+  @media phone-small {
+    font-size: 1.3rem;
+  }
+}
+
+.control-title {
+  font-family: font-primary;
+  color: text-dark-1;
+}
+
+.control-label {
+  font-family: font-primary;
+  color: text-dark-1;
+}
+
+.price {
+  flex: 1;
+  & p {
+    margin-top: 0.6rem;
+  }
+}
+
+.sizes {
+  flex: 1;
+  margin-top: 0.3rem;
+
+  @media phone-huge {
+    flex: 0.8;
+  }
+
+  & select {
+    margin-top: 0.9rem;
+    padding: 0;
+    margin-left: -0.4rem;
+    display: block;
+    font-size: inherit;
+    font-family: font-tertiary;
+    color: inherit;
+    text-transform: capitalize;
+    border: none;
+  }
+}
+
+.quantity {
+  flex: 1;
+  margin-top: 0.1rem;
+  & input {
+    width: 5.1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    display: block;
+    font-size: inherit;
+    font-family: font-tertiary;
+    color: inherit;
+    border: none;
+  }
+}
+
+.total {
+  flex: 0.4;
+
+  @media tablet-portrait {
+    flex: 0.3;
+  }
+
+  & p {
+    margin-top: 0.6rem;
+  }
+}
+
+.buttons {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+
+  @media phone-huge {
+    justify-content: center;
+  }
+  @media phone-small {
+    flex-direction: column;
+  }
+}
+
+.btn-spacing {
+  margin-right: 3rem;
+
+  @media phone-small {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+}
+
+.separator {
+  margin-top: 3rem;
+  height: 1px;
+  border-top: 1px solid #e8e8e8;
+}

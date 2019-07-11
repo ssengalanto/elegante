@@ -1,0 +1,108 @@
+@value font-primary from '../../sass/values/fonts.scss';
+@value color-light, color-dark, text-light-1 from '../../sass/values/colors.scss';
+@value phone-huge, phone-medium from '../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../sass/values/composition.scss';
+}
+
+.title {
+  composes: heading-1 from '../../sass/values/composition.scss';
+}
+
+.heading {
+  composes: heading-3 from '../../sass/values/composition.scss';
+  display: inline-block;
+
+  @media phone-huge {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  @media phone-huge {
+    padding-right: 2rem;
+  }
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  @media phone-huge {
+    margin-top: 3rem;
+  }
+}
+
+.answer {
+  padding: 0 2.5rem;
+  margin-left: 5rem;
+  margin-right: 7rem;
+
+  @media phone-huge {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.icon {
+  padding: 0.4rem 1rem;
+  margin-right: 2rem;
+  font-size: 1.6rem;
+  font-family: font-primary;
+  color: color-light;
+  background-color: color-dark;
+
+  @media phone-huge {
+    display: none;
+  }
+}
+
+.btn-icon {
+  width: 26px;
+  margin-top: 0.7rem;
+  margin-left: auto;
+  text-align: right;
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    height: 1.1rem;
+    width: 0.2rem;
+    background-color: text-light-1;
+    border-radius: 10px;
+    position: relative;
+    transition: 300ms ease-in-out transform;
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+    left: -0.25rem;
+    top: -0.4rem;
+  }
+
+  &:after {
+    transform: rotate(45deg);
+    left: 0.25rem;
+    top: -0.4rem;
+  }
+
+  &.open {
+    &:before {
+      transform: translateX(0.35rem) rotate(-45deg);
+    }
+    &:after {
+      transform: translateX(-0.35rem) rotate(45deg);
+    }
+  }
+}

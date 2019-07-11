@@ -1,0 +1,68 @@
+@value font-primary, light from '../../sass/values/fonts.scss';
+@value color-dark, color-light from '../../sass/values/colors.scss';
+@value tablet-landscape, tablet-portrait, phone-huge, phone-large, phone-medium from '../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.title-bar {
+  composes: content-width from '../../sass/values/composition.scss';
+  display: flex;
+  padding: 2.5rem 0rem 1rem 2.5rem;
+
+  @media tablet-landscape {
+    padding: 2.5rem 2rem 1rem 2.5rem;
+  }
+  @media phone-huge {
+    padding: 2rem 2.5rem 1rem 2.5rem;
+  }
+}
+
+.content {
+  composes: content-width from '../../sass/values/composition.scss';
+  display: flex;
+  padding-bottom: 5rem;
+
+  @media phone-huge {
+    flex-direction: column;
+  }
+}
+
+.title {
+  display: block;
+  margin-right: auto;
+  font-size: 2.4rem;
+  font-family: font-primary;
+  font-weight: light;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  @media tablet-landscape {
+    font-size: 2.2rem;
+  }
+  @media phone-large {
+    font-size: 2rem;
+  }
+}
+
+.toggle-filters {
+  display: none;
+  margin-left: auto;
+  margin-right: 2.6rem;
+  font-size: 1.1rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  text-decoration: underline;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  @media phone-huge {
+    display: block;
+  }
+  @media phone-medium {
+    margin-bottom: 1rem;
+  }
+}

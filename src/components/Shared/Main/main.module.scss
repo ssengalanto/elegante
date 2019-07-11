@@ -1,0 +1,14 @@
+@value tablet-landscape, phone-huge from '../../../sass/values/breakpoints.scss';
+
+.main {
+  &:focus {
+    outline: none;
+  }
+
+  @media tablet-landscape {
+    margin-top: 6.4rem;
+  }
+  @media phone-huge {
+    margin-top: 5.5rem;
+  }
+}

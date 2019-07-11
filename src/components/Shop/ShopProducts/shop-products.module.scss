@@ -1,0 +1,89 @@
+@value font-primary, font-tertiary, light, semi-bold from '../../../sass/values/fonts.scss';
+@value color-light, color-dark, text-dark-1, text-dark-2, text-light-3 from '../../../sass/values/colors.scss';
+@value tablet-landscape, tablet-portrait, phone-huge, phone-medium from '../../../sass/values/breakpoints.scss';
+
+.container {
+  flex: 1;
+  padding: 1.8rem 0;
+
+  @media tablet-landscape {
+    padding-right: 2rem;
+  }
+  @media phone-huge {
+    padding: 2.5rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media phone-medium {
+    justify-content: center;
+  }
+}
+
+.loader {
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.pagination {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: font-primary;
+
+  @media phone-medium {
+    margin-top: -1rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.pages {
+  cursor: pointer;
+  width: 3rem;
+  margin-right: 1rem;
+  padding: 0.7rem 0;
+  display: inline-block;
+  font-size: inherit;
+  text-align: center;
+  color: color-light;
+  background-color: text-dark-2;
+  border: none;
+  transition: all 0.3s;
+
+  &.active {
+    background-color: color-dark;
+  }
+
+  &:hover:not(.active) {
+    background-color: text-light-3;
+  }
+}
+
+.error {
+  margin-top: -1rem;
+  font-size: 2rem;
+  font-family: font-primary;
+
+  @media tablet-portrait {
+    font-size: 1.8rem;
+  }
+  @media phone-huge {
+    font-size: 1.6rem;
+  }
+}
+
+.dummy {
+  height: 1px;
+  width: 26.5rem;
+
+  @media tablet-landscape {
+    width: 22.6rem;
+  }
+  @media tablet-portrait {
+    display: none;
+  }
+}

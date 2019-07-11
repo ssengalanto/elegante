@@ -1,0 +1,108 @@
+@value color-dark, color-light, star, text-dark-2 from '../../sass/values/colors.scss';
+@value tablet-portrait, phone-huge from '../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../sass/values/composition.scss';
+}
+
+.title {
+  composes: heading-1 from '../../sass/values/composition.scss';
+}
+
+.form-container {
+  height: 55rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  composes: modal-background-dark from '../../sass/values/composition.scss';
+
+  @media phone-huge {
+    height: 48rem;
+    width: 27rem;
+  }
+}
+
+.form {
+  width: 20rem;
+  color: color-light;
+}
+
+.star {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: -0.4rem;
+  padding: 0.2rem 0.4rem;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 1.5rem;
+  color: text-dark-2;
+  transition: color 0.3s ease-out;
+
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.star-rating {
+  color: star;
+}
+
+.container {
+  display: flex;
+  padding: 0 2.5rem;
+
+  @media phone-huge {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.column-1 {
+  flex-basis: 6%;
+
+  @media tablet-portrait {
+    flex-basis: 8%;
+  }
+
+  & svg {
+    height: 3rem;
+    width: 3rem;
+    fill: color-dark;
+
+    @media tablet-portrait {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+    @media phone-huge {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.column-2 {
+  flex: 1;
+}
+
+.moment {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: text-dark-2;
+}
+
+.rating {
+  margin-bottom: -0.5rem;
+  text-align: right;
+  font-size: 1.7rem;
+  color: star;
+}
+
+.author {
+  text-align: right;
+  font-style: italic;
+  color: text-dark-2;
+}

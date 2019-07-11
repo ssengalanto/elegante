@@ -1,0 +1,51 @@
+@value font-tertiary from '../../sass/values/fonts.scss';
+@value color-light, danger, text-light-3 from '../../sass/values/colors.scss';
+@value phone-huge from '../../sass/values/breakpoints.scss';
+
+.container {
+  height: 55rem;
+  width: 30rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media phone-huge {
+    height: 48rem;
+    width: 27rem;
+  }
+}
+
+.form {
+  width: 20rem;
+  color: color-light;
+}
+
+.error {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: danger;
+}
+
+.switch-btn {
+  font-size: 1.1rem;
+  font-family: font-tertiary;
+  color: text-light-3;
+  position: absolute;
+  bottom: 2rem;
+  transition: all 0.3s;
+
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: color-light;
+  }
+}

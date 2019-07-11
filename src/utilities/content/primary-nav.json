@@ -1,0 +1,27 @@
+[
+  {
+    "id": "primary-01",
+    "title": "men",
+    "path": "men"
+  },
+  {
+    "id": "primary-02",
+    "title": "women",
+    "path": "women"
+  },
+  {
+    "id": "primary-03",
+    "title": "shop",
+    "path": "shop"
+  },
+  {
+    "id": "primary-04",
+    "title": "reviews",
+    "path": "reviews"
+  },
+  {
+    "id": "primary-05",
+    "title": "contact",
+    "path": "contact"
+  }
+]

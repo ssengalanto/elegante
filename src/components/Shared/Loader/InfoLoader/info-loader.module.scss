@@ -1,0 +1,46 @@
+@value tablet-landscape, tablet-portrait from '../../../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../../../sass/values/composition.scss';
+}
+
+.heading {
+  height: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+
+  @media tablet-portrait {
+    height: 3.5rem;
+  }
+}
+
+.title {
+  height: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+.line {
+  height: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.landscape {
+  display: none;
+
+  @media tablet-landscape {
+    display: block;
+  }
+}
+
+.portrait {
+  display: none;
+
+  @media tablet-portrait {
+    display: block;
+  }
+}

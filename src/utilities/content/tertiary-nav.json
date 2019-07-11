@@ -1,0 +1,17 @@
+[
+  {
+    "id": "tertiary-01",
+    "title": "view cart",
+    "path": "cart"
+  },
+  {
+    "id": "tertiary-02",
+    "title": "my wishlist",
+    "path": "wishlist"
+  },
+  {
+    "id": "tertiary-04",
+    "title": "FAQ",
+    "path": "faq"
+  }
+]

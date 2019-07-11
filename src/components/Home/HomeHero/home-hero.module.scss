@@ -1,0 +1,111 @@
+@value font-primary, thin, semi-bold from '../../../sass/values/fonts.scss';
+@value color-dark from '../../../sass/values/colors.scss';
+@value tablet-landscape, tablet-portrait, phone-huge, phone-large, phone-medium, phone-small from '../../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width from '../../../sass/values/composition.scss';
+}
+
+.image {
+  max-width: 114rem;
+  height: 65rem;
+  background-image: url(../../../assets/images/homepage/hero-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @media tablet-landscape {
+    height: 54rem;
+  }
+  @media tablet-portrait {
+    height: 43rem;
+  }
+  @media phone-huge {
+    height: 33rem;
+    background-position: bottom right;
+  }
+  @media phone-large {
+    height: 30rem;
+    background-position: bottom right;
+  }
+  @media phone-medium {
+    height: 26rem;
+  }
+  @media phone-small {
+    height: 25rem;
+  }
+}
+
+.slogan {
+  font-family: font-primary;
+  color: color-dark;
+  line-height: 1;
+
+  &--thin {
+    display: inline-block;
+    margin-top: 23rem;
+    margin-left: 10rem;
+    font-size: 7rem;
+    font-weight: thin;
+
+    @media tablet-landscape {
+      margin-top: 17.5rem;
+      font-size: 6rem;
+    }
+    @media tablet-portrait {
+      margin-top: 15rem;
+      font-size: 5rem;
+    }
+    @media phone-huge {
+      margin-top: 11rem;
+      margin-left: 3rem;
+      font-size: 4rem;
+    }
+    @media phone-large {
+      margin-top: 9rem;
+      margin-left: 3rem;
+      font-size: 3.5rem;
+    }
+    @media phone-medium {
+      margin-top: 8rem;
+      font-size: 3rem;
+    }
+    @media phone-small {
+      margin-top: 7rem;
+      margin-left: 2rem;
+    }
+  }
+
+  &--bold {
+    display: block;
+    margin-left: 22.5rem;
+    font-size: 9rem;
+    font-weight: semi-bold;
+
+    @media tablet-landscape {
+      font-size: 8rem;
+    }
+    @media tablet-portrait {
+      margin-left: 20rem;
+      font-size: 6rem;
+    }
+    @media phone-huge {
+      margin-left: 8rem;
+      font-size: 5rem;
+    }
+    @media phone-large {
+      margin-left: 8rem;
+      font-size: 4rem;
+    }
+    @media phone-medium {
+      font-size: 3.5rem;
+    }
+    @media phone-small {
+      margin-left: 4rem;
+    }
+  }
+}

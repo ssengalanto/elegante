@@ -1,0 +1,27 @@
+@value color-light, text-light-3 from '../../../sass/values/colors.scss';
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-block;
+}
+
+.nav-link:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.icon-default {
+  height: 16px;
+  width: 16px;
+  fill: text-light-3;
+  transition: all 0.3s;
+}
+
+.icon-default:hover {
+  fill: color-light;
+}

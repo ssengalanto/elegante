@@ -1,0 +1,93 @@
+@value font-primary, light, semi-bold from '../../../sass/values/fonts.scss';
+@value color-dark, text-light-2 from '../../../sass/values/colors.scss';
+@value tablet-landscape, tablet-portrait, phone-huge, phone-large from '../../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width from '../../../sass/values/composition.scss';
+
+  display: flex;
+  justify-content: space-between;
+  padding: 10rem 5rem;
+
+  @media tablet-landscape {
+    padding: 9rem 5rem;
+  }
+  @media tablet-portrait {
+    padding: 8rem 5rem;
+  }
+  @media phone-huge {
+    padding: 5rem;
+    flex-direction: column;
+  }
+  @media phone-large {
+    padding: 5rem 3rem;
+    flex-direction: column;
+  }
+
+  & > *:not(:first-child) {
+    @media phone-huge {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.item {
+  flex-basis: 28%;
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  top: -58%;
+  right: 0;
+  color: #f3f3f3;
+  font-size: 10rem;
+  font-family: font-primary;
+  font-weight: semi-bold;
+  z-index: -1;
+
+  @media tablet-landscape {
+    font-size: 9rem;
+    top: -50%;
+  }
+  @media tablet-portrait {
+    font-size: 7rem;
+    top: -32%;
+  }
+  @media phone-huge {
+    font-size: 6rem;
+    top: -20%;
+  }
+  @media phone-large {
+    font-size: 5.5rem;
+    top: -18%;
+  }
+}
+
+.heading {
+  composes: heading-2 from '../../../sass/values/composition.scss';
+  text-transform: capitalize;
+
+  &--light {
+    color: text-light-2;
+    font-weight: light;
+  }
+
+  &--bold {
+    color: color-dark;
+    font-weight: semi-bold;
+  }
+}
+
+.sub-heading {
+  composes: sub-heading from '../../../sass/values/composition.scss';
+  margin-bottom: 3rem;
+
+  @media phone-huge {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,63 @@
+@value phone-huge from '../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../sass/values/composition.scss';
+
+  & > .sub-heading {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.title {
+  composes: heading-1 from '../../sass/values/composition.scss';
+}
+
+.heading {
+  composes: heading-2 from '../../sass/values/composition.scss';
+  margin-bottom: 1rem;
+}
+
+.sub-heading {
+  composes: heading-3 from '../../sass/values/composition.scss';
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+
+  & svg {
+    height: 3rem;
+    width: 3rem;
+    display: inline-block;
+    margin-right: 2rem;
+
+    @media phone-huge {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.list {
+  margin-left: 3rem;
+}
+
+.separator {
+  margin: 5rem 0;
+
+  @media phone-huge {
+    height: 1px;
+    border-top: 1px solid #e8e8e8;
+    margin: 3rem 0;
+  }
+}

@@ -1,0 +1,238 @@
+@value font-tertiary, semi-bold from '../../sass/values/fonts.scss';
+@value success, danger, disabled, text-dark-1 from '../../sass/values/colors.scss';
+@value tablet-landscape, tablet-portrait, phone-huge, phone-large, phone-medium from '../../sass/values/breakpoints.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+  margin-top: 2.5rem;
+
+  @media phone-huge {
+    padding: 0;
+    flex-direction: column;
+  }
+  @media phone-medium {
+    font-size: 1.3rem;
+  }
+}
+
+.column-title {
+  composes: sub-heading from '../../sass/values/composition.scss';
+  display: block;
+  margin-bottom: 0.9rem;
+
+  @media phone-huge {
+    letter-spacing: 2px;
+  }
+  @media phone-medium {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
+
+.label {
+  composes: sub-heading from '../../sass/values/composition.scss';
+  display: block;
+
+  @media phone-huge {
+    letter-spacing: 2px;
+  }
+  @media phone-medium {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+}
+
+.separator {
+  height: 1px;
+  margin: 2rem 0;
+  border-top: 1px solid #e8e8e8;
+
+  @media tablet-portrait {
+    margin: 1rem 0;
+  }
+  @media phone-huge {
+    display: none;
+  }
+}
+
+.primary-column {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  padding-right: 5rem;
+
+  @media tablet-landscape {
+    padding-right: 4rem;
+  }
+  @media tablet-portrait {
+    padding-right: 2.5rem;
+  }
+  @media phone-huge {
+    padding: 0;
+  }
+
+  & img {
+    max-width: 13rem;
+
+    @media tablet-portrait {
+      max-width: 11rem;
+    }
+    @media phone-huge {
+      max-width: 20rem;
+    }
+    @media phone-large {
+      max-width: 16rem;
+    }
+  }
+}
+
+.secondary-column {
+  flex: 1 1 80%;
+  display: flex;
+  flex-direction: column;
+
+  @media phone-huge {
+    width: 100%;
+  }
+}
+
+.secondary-col1 {
+  flex: 1;
+
+  @media phone-huge {
+    text-align: center;
+  }
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: semi-bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.5;
+
+  @media tablet-landscape {
+    font-size: 1.6rem;
+  }
+  @media tablet-portrait {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  @media phone-huge {
+    margin-bottom: 2rem;
+  }
+}
+
+.brand {
+  composes: sub-heading from '../../sass/values/composition.scss';
+  margin-bottom: 0.3rem;
+}
+
+.secondary-col2 {
+  flex: 1;
+  display: flex;
+}
+
+.price {
+  flex: 1;
+  margin-right: 5rem;
+
+  @media tablet-portrait {
+    margin-right: 1rem;
+  }
+  @media phone-medium {
+    flex: 0.7;
+  }
+}
+
+.sizes {
+  flex: 1;
+
+  @media phone-medium {
+    flex: 0.6;
+  }
+
+  & select {
+    margin-top: 1rem;
+    padding: 0;
+    margin-left: -0.4rem;
+    display: block;
+    font-size: 1.4rem;
+    font-family: font-tertiary;
+    color: text-dark-1;
+    text-transform: capitalize;
+    border: none;
+
+    @media phone-medium {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.add-btn {
+  flex: 1;
+  text-align: center;
+
+  &-icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: success;
+    transition: 0.3s;
+
+    @media phone-large {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  &-icon--disabled {
+    fill: disabled;
+  }
+}
+
+.remove-btn {
+  flex: 0;
+  margin-left: 10rem;
+  text-align: center;
+
+  @media tablet-portrait {
+    margin-left: 4rem;
+  }
+  @media phone-huge {
+    margin-left: 2rem;
+  }
+  @media phone-medium {
+    margin-left: 1rem;
+  }
+
+  &-icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    padding-top: 2px;
+    fill: danger;
+
+    @media phone-large {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
+  }
+}
+
+.add-btn,
+.remove-btn {
+  & button {
+    cursor: pointer;
+    padding: 0 1rem;
+    border: none;
+    background-color: transparent;
+  }
+
+  & button:disabled {
+    cursor: not-allowed;
+  }
+}

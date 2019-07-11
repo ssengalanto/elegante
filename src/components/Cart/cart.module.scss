@@ -1,0 +1,108 @@
+@value font-primary, font-tertiary, light, regular from '../../sass/values/fonts.scss';
+@value tablet-portrait, phone-huge, phone-large, phone-medium from '../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../sass/values/composition.scss';
+}
+
+.title {
+  composes: heading-1 from '../../sass/values/composition.scss';
+
+  @media phone-huge {
+    text-align: center;
+  }
+}
+
+.separator {
+  height: 1px;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.empty {
+  margin-top: 5rem;
+
+  @media phone-large {
+    margin-top: 2rem;
+  }
+}
+
+.subtotal {
+  width: 45rem;
+  margin-left: auto;
+
+  @media phone-huge {
+    width: auto;
+  }
+}
+
+.subtotal-content {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0rem;
+
+  @media phone-huge {
+    margin-top: 1rem;
+  }
+}
+
+.subtotal-title {
+  margin-top: 1rem;
+  margin-right: auto;
+  font-size: 3rem;
+  font-family: font-primary;
+  text-transform: uppercase;
+
+  @media tablet-portrait {
+    font-size: 2.5rem;
+  }
+  @media phone-large {
+    font-size: 2rem;
+  }
+}
+
+.subtotal-price {
+  margin-right: 1rem;
+  font-size: 2.5rem;
+  font-weight: regular;
+  font-family: font-primary;
+
+  @media tablet-portrait {
+    margin-top: 1rem;
+    font-size: 2.2rem;
+  }
+  @media phone-large {
+    font-size: 2rem;
+  }
+}
+
+.subtotal-promo {
+  font-size: 1.1rem;
+  font-weight: light;
+  font-family: font-primary;
+}
+
+.btn-spacing {
+  margin-left: 2rem;
+
+  @media phone-medium {
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+}
+
+.subtotal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+
+  @media phone-medium {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

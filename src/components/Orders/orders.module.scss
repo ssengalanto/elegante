@@ -1,0 +1,22 @@
+@value font-tertiary from '../../sass/values/fonts.scss';
+@value phone-huge from '../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../sass/values/composition.scss';
+}
+
+.title {
+  composes: heading-1 from '../../sass/values/composition.scss';
+}
+
+.empty {
+  margin-top: 5rem;
+
+  @media phone-huge {
+    margin-top: 2rem;
+  }
+}

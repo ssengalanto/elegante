@@ -1,0 +1,83 @@
+@value font-primary, light from '../../../sass/values/fonts.scss';
+@value color-dark, color-light, text-dark-1, text-dark-2, outline from '../../../sass/values/colors.scss';
+@value tablet-portrait, phone-huge, phone-large from '../../../sass/values/breakpoints.scss';
+
+%subscribe-text {
+  font-size: 1.2rem;
+  font-family: font-primary;
+  font-weight: light;
+}
+
+.container {
+  text-align: center;
+}
+
+.content {
+  display: inline-block;
+  position: relative;
+  margin-top: 3rem;
+
+  @media tablet-portrait {
+    margin-top: 1.5rem;
+  }
+}
+
+.input {
+  @extend %subscribe-text;
+  width: 27rem;
+  padding: 1rem 2.2rem;
+  font-size: 1.4rem;
+  color: text-dark-1;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border: 1px solid text-dark-2;
+  border-right: none;
+
+  @media tablet-portrait {
+    width: 21rem;
+    padding: 0.8rem 2rem;
+  }
+  @media phone-huge {
+    width: 20rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  @media phone-large {
+    width: 18.5rem;
+  }
+
+  &::placeholder {
+    @extend %subscribe-text;
+    color: text-dark-2;
+
+    @media phone-huge {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.button {
+  @extend %subscribe-text;
+  cursor: pointer;
+  height: 100%;
+  padding: 1.2rem 1.7rem 1.1rem 1.5rem;
+  color: color-light;
+  letter-spacing: 2px;
+  background-color: color-dark;
+  border: 1px solid color-dark;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+  @media tablet-portrait {
+    font-size: 1.1rem;
+    padding: 1.1rem 1.3rem 0.9rem 1.2rem;
+  }
+  @media phone-huge {
+    font-size: 1rem;
+    padding: 0.9rem 1rem 0.8rem 1rem;
+  }
+}
+
+.waiting {
+  cursor: wait;
+}

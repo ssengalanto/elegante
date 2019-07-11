@@ -1,0 +1,78 @@
+@value font-primary from '../../sass/values/fonts.scss';
+@value tablet-portrait, phone-huge from '../../sass/values/breakpoints.scss';
+
+.section {
+  position: relative;
+}
+
+.content {
+  composes: content-width--padding from '../../sass/values/composition.scss';
+  display: flex;
+
+  @media tablet-portrait {
+    flex-direction: column;
+  }
+}
+
+.form {
+  margin-left: 5rem;
+
+  @media tablet-portrait {
+    margin-left: 0;
+  }
+}
+
+.column:nth-child(1) {
+  flex: 0 1 36%;
+  margin-right: 3rem;
+
+  @media tablet-portrait {
+    margin-right: 0;
+  }
+}
+
+.column:nth-child(2) {
+  flex: 1;
+  margin-top: 4rem;
+
+  @media tablet-portrait {
+    margin-top: 5rem;
+  }
+}
+
+.title {
+  composes: heading-1 from '../../sass/values/composition.scss';
+}
+
+.information {
+  display: flex;
+
+  &:not(:last-child) {
+    margin: 3.5rem 0;
+
+    @media tablet-portrait {
+      margin: 3rem 0;
+    }
+  }
+}
+
+.information-icon {
+  flex-basis: 13%;
+
+  @media tablet-portrait {
+    flex-basis: 7%;
+  }
+  @media phone-huge {
+    flex-basis: 13%;
+  }
+
+  & svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-block;
+  }
+}
+
+.information-detail {
+  font-family: font-primary;
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "secondary-01",
+    "title": "shipping & delivery",
+    "path": "shipping-delivery"
+  },
+  {
+    "id": "secondary-02",
+    "title": "secure payment",
+    "path": "secure-payment"
+  },
+  {
+    "id": "secondary-03",
+    "title": "support",
+    "path": "support"
+  },
+  {
+    "id": "secondary-04",
+    "title": "guarantee",
+    "path": "guarantee"
+  },
+  {
+    "id": "secondary-05",
+    "title": "terms & conditions",
+    "path": "terms-conditions"
+  }
+]

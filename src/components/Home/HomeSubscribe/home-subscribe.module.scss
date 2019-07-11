@@ -1,0 +1,103 @@
+@value tablet-landscape, tablet-portrait, phone-huge, phone-large, phone-medium, phone-small from '../../../sass/values/breakpoints.scss';
+
+.section {
+  position: static;
+}
+
+.content {
+  composes: content-width from '../../../sass/values/composition.scss';
+
+  height: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(../../../assets/images/homepage/subscribe-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  @media tablet-landscape {
+    height: 70rem;
+  }
+  @media tablet-portrait {
+    height: 50rem;
+  }
+  @media phone-huge {
+    height: auto;
+    padding: 5rem;
+    padding-bottom: 3rem;
+    flex-direction: column;
+    background: none;
+  }
+  @media phone-large {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  @media phone-medium {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.background {
+  display: none;
+  @media phone-huge {
+    display: block;
+    height: 45rem;
+    width: 100%;
+    background-image: url(../../../assets/images/homepage/subscribe-mobile-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media phone-large {
+    height: 40rem;
+  }
+  @media phone-medium {
+    height: 38rem;
+  }
+  @media phone-small {
+    height: 35rem;
+  }
+}
+
+.column {
+  flex-basis: 50%;
+  padding-left: 5rem;
+
+  @media tablet-portrait {
+    flex-basis: 58%;
+  }
+  @media phone-huge {
+    padding-left: 0;
+  }
+}
+
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  @media tablet-landscape {
+    font-size: 4rem;
+  }
+  @media tablet-portrait {
+    font-size: 3.2rem;
+  }
+  @media phone-huge {
+    font-size: 3rem;
+  }
+  @media phone-large {
+    font-size: 2.8rem;
+  }
+  @media phone-medium {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+  }
+  @media phone-small {
+    letter-spacing: 1px;
+    font-size: 2.4rem;
+  }
+}

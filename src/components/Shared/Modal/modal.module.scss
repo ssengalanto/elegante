@@ -1,0 +1,76 @@
+@value color-light, color-dark from '../../../sass/values/colors.scss';
+@value phone-huge from '../../../sass/values/breakpoints.scss';
+
+%modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  z-index: 100;
+
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  position: relative;
+}
+
+.auth {
+  height: 55rem;
+  width: 30rem;
+  composes: modal-background-dark from '../../../sass/values/composition.scss';
+
+  @media phone-huge {
+    height: 48rem;
+    width: 27rem;
+  }
+}
+
+.container,
+.auth {
+  &:focus {
+    outline: none;
+  }
+}
+
+.default-btn {
+  @extend %modal-btn;
+
+  & svg {
+    height: 12px;
+    width: 12px;
+    fill: #6a6a6a;
+    transition: all 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    & svg {
+      fill: color-dark;
+    }
+  }
+}
+
+.dark-btn {
+  @extend %modal-btn;
+
+  & svg {
+    height: 12px;
+    width: 12px;
+    fill: #6a6a6a;
+    transition: all 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    & svg {
+      fill: color-light;
+    }
+  }
+}
