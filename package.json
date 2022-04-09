@@ -6,7 +6,7 @@
     "array-flat-polyfill": "^1.0.1",
     "firebase": "^6.2.4",
     "formik": "^1.5.7",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.12.0",
     "postcss-modules-values": "^3.0.0",
     "prop-types": "^15.7.2",
